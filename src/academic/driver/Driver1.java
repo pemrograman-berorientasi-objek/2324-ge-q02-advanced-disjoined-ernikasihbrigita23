@@ -3,9 +3,9 @@ package academic.driver;
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
-import java.util.HashMap; 
+import java.util.HashMap;
 import java.util.Scanner;
-import academic.model.*; 
+import academic.model.*;
 
 /**
  * * @author 12S22013 Christoffel Theofani Napitupulu 
@@ -20,7 +20,7 @@ public class Driver1 {
     static List<String> storedList = new ArrayList<>();
     static List<Lecturer> lecturers = new ArrayList<>();
     static List<CourseOpening> courseOpenings = new ArrayList<>();
-
+    
     public static void main(String[] _args) {
         while (true) {
             String input = scanner.nextLine();
@@ -34,28 +34,6 @@ public class Driver1 {
             String[] stored = input.split("#");
 
             switch (stored[0]) {
-
-                case "findBestStudent":
-                    if (stored.length == 3) {
-                        String academicYear = stored[1];
-                        String semester = stored[2];
-                        Student bestStudent = findBestStudent(academicYear, semester, enrollments, students, courses);
-                        if (bestStudent != null) {
-                            System.out.println(bestStudent.getId() + "|" + bestStudent.getName() + "|" + bestStudent.getYear() + "|" + bestStudent.getStudyProgram());
-                        }
-                    }
-                    break;
-
-                
-                case "add-best-student":
-                    if (stored.length == 2) {
-                        String bestStudentId = stored[1];
-                        Student bestStudent = findStudentById(bestStudentId, students);
-                        if (bestStudent != null) {
-                        } 
-                    }
-                    break;
-
                 case "lecturer-add":
                     if (stored.length == 6) {
                         Lecturer lecturer = new Lecturer(stored[1],
@@ -398,30 +376,4 @@ public class Driver1 {
         return null;
     }
     
-    private static boolean isEven(String studentId) {
-        int id = Integer.parseInt(studentId.substring(2));
-        return id % 2 == 0;
-    }
-    private static Student findBestStudent(String academicYear, String semester, List<Enrollment> enrollments, List<Student> students, List<Course> courses) {
-        Student bestStudent = null;
-        double maxGPA = 0.0;
-    
-        for (Enrollment enrollment : enrollments) {
-            if (enrollment.getAcademicYear().equals(academicYear) && enrollment.getSemester().equals(semester)) {
-                Student student = findStudentById(enrollment.getStudentId(), students);
-                if (student != null) {
-                    double gpa = calculateGPA(enrollment.getStudentId(), enrollments, courses);
-                    if (gpa > maxGPA) {
-                        maxGPA = gpa;
-                        bestStudent = student;
-                    } else if (gpa == maxGPA && isEven(student.getId())) {
-                        // Choose the even student if GPA is equal and the student ID is even
-                        bestStudent = student;
-                    }
-                }
-            }
-        }
-    
-        return bestStudent;
-    }
 }
