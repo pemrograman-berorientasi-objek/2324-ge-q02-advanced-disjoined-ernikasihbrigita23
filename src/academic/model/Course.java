@@ -6,7 +6,7 @@ package academic.model;
  */
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List; 
 
 public class Course {
     private String code;

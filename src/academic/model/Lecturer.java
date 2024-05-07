@@ -11,7 +11,7 @@ public class Lecturer extends Person {
     public Lecturer(String id, String name, String initial, String email, String studyProgram) {
         super(id, name, email, initial); 
         this.studyProgram = studyProgram;
-    }
+    } 
 
 
     public String getStudyProgram() {
