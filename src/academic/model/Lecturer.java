@@ -5,7 +5,6 @@ package academic.model;
  * @author 12S22047 Erni Kasih B. Sarumaha
  */
 
-
 public class Lecturer extends Person {
     private String studyProgram;
 

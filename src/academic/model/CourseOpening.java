@@ -5,7 +5,6 @@ package academic.model;
  * @author 12S22047 Erni Kasih B. Sarumaha
  */
 
-
 import java.util.List;
 
 public class CourseOpening {
