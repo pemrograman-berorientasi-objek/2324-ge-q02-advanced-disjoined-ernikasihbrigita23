@@ -1,8 +1,10 @@
 package academic.model;
+
 /**
  * * @author 12S22013 Christoffel Theofani Napitupulu 
  * @author 12S22047 Erni Kasih B. Sarumaha
  */
+
 
 import java.util.List;
 

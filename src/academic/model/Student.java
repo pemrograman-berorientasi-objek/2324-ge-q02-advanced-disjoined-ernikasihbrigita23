@@ -12,9 +12,9 @@ public class Student {
     private String studyProgram;
 
     public Student(String id, String name, String year, String studyProgram) {
-        this.id = id; 
+        this.id = id;
         this.name = name;
-        this.year = year; 
+        this.year = year;
         this.studyProgram = studyProgram;
     }
 
