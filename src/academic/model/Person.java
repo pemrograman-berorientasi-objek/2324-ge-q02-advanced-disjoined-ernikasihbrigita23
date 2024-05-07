@@ -12,7 +12,7 @@ public class Person {
     private String initial; 
 
     public Person(String id, String name, String email, String initial) {
-        this.id = id;
+        this.id = id; 
         this.name = name;
         this.email = email;
         this.initial = initial;

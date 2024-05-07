@@ -69,4 +69,4 @@ public class Enrollment {
             return getCourseCode() + "|" + getStudentId() + "|" + getAcademicYear() + "|" + getSemester() + "|" + getGrade();
         }
     }
-} 
+}

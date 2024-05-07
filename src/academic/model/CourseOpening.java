@@ -6,7 +6,7 @@ package academic.model;
 
 import java.util.List;
 
-public class CourseOpening { 
+public class CourseOpening {
     private String courseCode;
     private String academicYear;
     private String semester;
