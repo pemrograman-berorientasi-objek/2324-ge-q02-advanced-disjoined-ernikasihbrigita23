@@ -186,8 +186,6 @@ add-best-student#best-student
 12S20002|B/A
 12S20002|B/A
       
-
-
 5
 lecturer-add#0130058501#Parmonangan Rotua Togatorop#PAT#mona.togatorop@del.ac.id#Information Systems
 lecturer-add#0114129002#Iustisia Natalia Simbolon#IUS#iustisia.simbolon@del.ac.id#Informatics
